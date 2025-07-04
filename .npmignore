@@ -1,3 +1,4 @@
 *.ts
+*.tgz
 tsconfig.json
 node_modules
