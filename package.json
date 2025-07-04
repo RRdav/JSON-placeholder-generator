@@ -1,6 +1,6 @@
 {
-  "name": "placeholder-generator",
-  "version": "1.0.0",
+  "name": "rrd-placeholder-generator",
+  "version": "1.0.1",
   "description": "Generate placeholder JSON data for testing purposes",
   "main": "index.js",
   "repository": {

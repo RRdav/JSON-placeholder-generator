@@ -10,3 +10,12 @@ A simple console application to generate JSON data placeholders for various purp
     - --products
     - --users
     - --posts
+
+## Usage
+Run the application with the desired command:
+
+```bash
+placeholder-generator generate --products
+placeholder-generator generate --users
+placeholder-generator generate --posts
+```
