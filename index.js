@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -48,7 +49,6 @@ program
     .option('--posts', 'Generate posts placeholder')
     .action(function (options) {
     // Determine which placeholder to generate based on the options
-    console.log(options);
     var APIurl = '';
     var selectedOption = '';
     if (options.products) {
@@ -92,6 +92,5 @@ program
             });
         });
     }
-    // Generate placeholder JSON in users workspace
 });
 program.parse(process.argv);

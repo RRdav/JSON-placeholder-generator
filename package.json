@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "description": "Generate placeholder JSON data for testing purposes",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RRdav/JSON-placeholder-generator.git"
+  },
+  "bin" : {
+    "placeholder-generator": "./index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:run": "tsc index.ts && node index.js"
