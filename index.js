@@ -47,23 +47,26 @@ program
     .option('--products', 'Generate products placeholder')
     .option('--users', 'Generate users placeholder')
     .option('--posts', 'Generate posts placeholder')
+    // Limit amount of data
+    .option('--limit <number>', 'Limit the number of items in the placeholder', parseInt, 10)
     .action(function (options) {
     // Determine which placeholder to generate based on the options
     var APIurl = '';
     var selectedOption = '';
+    var limit = options.limit || 10; // Default limit to 10 if not provided
     if (options.products) {
         console.log('Generating products placeholder...');
-        APIurl = 'https://dummyjson.com/products';
+        APIurl = "https://dummyjson.com/products?limit=".concat(limit, "&select=id,title,price,description,sku");
         selectedOption = 'products';
     }
     else if (options.users) {
         console.log('Generating users placeholder...');
-        APIurl = 'https://dummyjson.com/users';
+        APIurl = "https://dummyjson.com/users?limit=".concat(limit, "&select=id,firstName,lastName,age");
         selectedOption = 'users';
     }
     else if (options.posts) {
         console.log('Generating posts placeholder...');
-        APIurl = 'https://dummyjson.com/posts';
+        APIurl = "https://dummyjson.com/posts?limit=".concat(limit, "&select=id,title,body,userId");
         selectedOption = 'posts';
     }
     else {
